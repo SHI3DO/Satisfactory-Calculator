@@ -3,9 +3,9 @@ import * as React from 'react';
 import Layout from '@/components/layout/Layout';
 import ArrowLink from '@/components/links/ArrowLink';
 import ButtonLink from '@/components/links/ButtonLink';
-import UnderlineLink from '@/components/links/UnderlineLink';
 import UnstyledLink from '@/components/links/UnstyledLink';
 import Seo from '@/components/Seo';
+import Navbar from '@/components/Navbar';
 
 /**
  * SVGR Support
@@ -27,6 +27,7 @@ export default function HomePage() {
       <Seo />
 
       <main>
+        <Navbar/>
         <section className='bg-white'>
           <div className='layout flex flex-col justify-center items-center min-h-screen text-center'>
             <Vercel className='text-5xl' />
@@ -59,13 +60,6 @@ export default function HomePage() {
                 alt='Deploy with Vercel'
               />
             </UnstyledLink>
-
-            <footer className='absolute bottom-2 text-gray-700'>
-              © {new Date().getFullYear()} By{' '}
-              <UnderlineLink href='https://theodorusclarence.com?ref=tsnextstarter'>
-                Theodorus Clarence
-              </UnderlineLink>
-            </footer>
           </div>
         </section>
       </main>
